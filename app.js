@@ -15,6 +15,24 @@ app.get('/api/v1/bags', (req, res) => {
   });
 });
 
+app.get('/api/v1/bags/:id', (req, res) => {
+  const id = req.params.id * 1;
+  const bag = bags.find((el) => el.id === id);
+  if (!bag) {
+    return res.status(404).json({
+      status: 'fail',
+      message: 'Invalid ID',
+    });
+  }
+
+  res.status(200).json({
+    status: 'success',
+    data: {
+      bag,
+    },
+  });
+});
+
 app.post('/api/v1/bags', (req, res) => {
   const newId = bags[bags.length - 1].id + 1;
   const newBag = Object.assign({ id: newId }, req.body);
@@ -33,6 +51,7 @@ app.post('/api/v1/bags', (req, res) => {
     }
   );
 });
+
 const port = 3000;
 app.listen(port, () => {
   console.log(`App running on port ${port}...`);
