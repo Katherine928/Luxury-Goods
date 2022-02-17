@@ -3,5 +3,23 @@
     "express": "^4.17.2",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
-  }
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "luxury-goods",
+  "description": "Luxury bag website",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Katherine928/Luxury-Goods.git"
+  },
+  "author": "Katherine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Katherine928/Luxury-Goods/issues"
+  },
+  "homepage": "https://github.com/Katherine928/Luxury-Goods#readme"
 }
