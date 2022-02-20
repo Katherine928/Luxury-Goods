@@ -1,5 +1,17 @@
 const fs = require('fs');
 
+// MIDDLEWARE
+exports.checkID = (req, res, next, val) => {
+  console.log(`The id is : ${val}`);
+  if (req.params.id * 1 > bags.length) {
+    return res.status(404).json({
+      status: 'fail',
+      message: 'Invalid ID',
+    });
+  }
+  next();
+};
+
 const bags = JSON.parse(
   fs.readFileSync(`${__dirname}/../dev-data/data/bag-simple.json`)
 );
@@ -55,12 +67,6 @@ exports.creatBag = (req, res) => {
 
 exports.updateBag = (req, res) => {
   console.log(req.params.id);
-  if (req.params.id * 1 > bags.length) {
-    return res.status(404).json({
-      status: 'fail',
-      message: 'Invalid ID',
-    });
-  }
   res.status(200).json({
     status: 'success',
     data: {
@@ -71,12 +77,6 @@ exports.updateBag = (req, res) => {
 
 exports.deleteBag = (req, res) => {
   console.log(req.params.id);
-  if (req.params.id * 1 > bags.length) {
-    return res.status(404).json({
-      status: 'fail',
-      message: 'Invalid ID',
-    });
-  }
   res.status(204).json({
     status: 'success',
     data: null,
