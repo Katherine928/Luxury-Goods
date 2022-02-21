@@ -33,6 +33,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: #777;
   /* padding: 3rem; */
+  cursor: url(../img/cursor.gif), auto;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,6 +187,7 @@ body {
 .btn,
 .btn:link,
 .btn:visited {
+  cursor: url(../img/cursor.gif), auto;
   font-size: 1.6rem;
   padding: 1.4rem 3rem;
   border-radius: 10rem;
@@ -204,6 +206,7 @@ body {
 }
 
 .btn:hover {
+  cursor: url(../img/cursor.gif), auto;
   -webkit-transform: translateY(-3px);
   transform: translateY(-3px);
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
@@ -211,6 +214,7 @@ body {
 }
 
 .btn:active {
+  cursor: url(../img/cursor.gif), auto;
   -webkit-transform: translateY(-1px);
   transform: translateY(-1px);
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -218,6 +222,7 @@ body {
 }
 
 .btn:focus {
+  cursor: url(../img/cursor.gif), auto;
   outline: none;
   background-color: #f94892;
 }
@@ -896,6 +901,7 @@ body {
 .nav__el,
 .nav__el:link,
 .nav__el:visited {
+  cursor: url(../img/cursor.gif), auto;
   color: black;
   text-transform: uppercase;
   font-size: 1.6rem;
@@ -916,6 +922,7 @@ body {
 }
 .nav__el:hover,
 .nav__el:active {
+  cursor: url(../img/cursor.gif), auto;
   -webkit-transform: translateY(-2px);
   transform: translateY(-2px);
   text-shadow: 0 0.7rem 1rem black;
