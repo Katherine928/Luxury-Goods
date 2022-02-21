@@ -5,7 +5,10 @@ const router = express.Router();
 
 router.param('id', bagController.checkID);
 
-router.route('/').get(bagController.getAllBags).post(bagController.creatBag);
+router
+  .route('/')
+  .get(bagController.getAllBags)
+  .post(bagController.checkBody, bagController.creatBag);
 router
   .route('/:id')
   .get(bagController.getBag)

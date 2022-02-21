@@ -32,7 +32,7 @@ body {
   font-weight: 300;
   font-family: 'Lato', sans-serif;
   color: #777;
-  padding: 3rem;
+  /* padding: 3rem; */
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,7 +44,7 @@ body {
 }
 
 .main {
-  background-color: #f7f7f7;
+  background-color: #fff;
   padding: 8rem 6rem;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -156,13 +156,13 @@ body {
     linear,
     left top,
     right bottom,
-    from(rgba(125, 213, 111, 0.85)),
-    to(rgba(40, 180, 135, 0.85))
+    from(hsla(335, 92%, 47%, 0.85)),
+    to(hsla(335, 94%, 63%, 0.85))
   );
   background-image: linear-gradient(
     to bottom right,
-    rgba(125, 213, 111, 0.85),
-    rgba(40, 180, 135, 0.85)
+    (hsla(335, 92%, 47%, 0.85)),
+    (hsla(335, 94%, 63%, 0.85))
   );
 }
 
@@ -219,7 +219,7 @@ body {
 
 .btn:focus {
   outline: none;
-  background-color: #2e864b;
+  background-color: #f94892;
 }
 
 .btn--white {
@@ -231,11 +231,11 @@ body {
 }
 
 .btn--green {
-  background-color: #55c57a;
+  background-color: #ffa1c9;
   color: #fff;
 }
 .btn--green::after {
-  background-color: #55c57a;
+  background-color: #f94892;
 }
 
 .btn--small {
@@ -246,7 +246,7 @@ body {
 .btn-small,
 .btn-small:link,
 .btn-small:visited {
-  background-color: #55c57a;
+  background-color: #f94892;
   color: #fff;
   font-size: 1.4rem;
   padding: 1.25rem 3rem;
@@ -262,7 +262,7 @@ body {
 }
 
 .btn-small:hover {
-  background-color: #7dd56f;
+  background-color: #f94892;
 }
 
 .btn-text:link,
@@ -277,7 +277,7 @@ body {
 }
 
 .btn-text:hover {
-  background-color: #55c57a;
+  background-color: #f94892;
   color: #fff;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
@@ -299,7 +299,7 @@ body {
 }
 
 .header {
-  background-color: #444;
+  background-color: #ffeded;
   padding: 0 5rem;
   height: 8rem;
   position: relative;
@@ -795,7 +795,7 @@ body {
 }
 
 .footer {
-  background-color: #f7f7f7;
+  background-color: #fcfcfc;
   padding: 6rem 4rem 3rem 4rem;
   font-size: 1.4rem;
   display: grid;
@@ -896,7 +896,7 @@ body {
 .nav__el,
 .nav__el:link,
 .nav__el:visited {
-  color: #f7f7f7;
+  color: black;
   text-transform: uppercase;
   font-size: 1.6rem;
   text-decoration: none;
@@ -971,7 +971,7 @@ body {
 .nav__search-btn svg {
   height: 2rem;
   width: 2rem;
-  fill: #f7f7f7;
+  fill: black;
 }
 .nav__search-input {
   font-family: inherit;
@@ -1112,10 +1112,10 @@ body {
     linear,
     left top,
     right bottom,
-    from(#7dd56f),
-    to(#28b487)
+    from(#ffeded),
+    to(#ffefef)
   );
-  background-image: linear-gradient(to right bottom, #7dd56f, #28b487);
+  background-image: linear-gradient(to right bottom, #ffeded, #ffefef);
   opacity: 0.7;
 }
 .card__picture-img {
@@ -1159,10 +1159,10 @@ body {
 .card__icon {
   height: 2rem;
   width: 2rem;
-  fill: #55c57a;
+  fill: #ffa1c9;
 }
 .card__footer {
-  background-color: #f7f7f7;
+  background-color: #fff;
   padding: 2.5rem 3rem;
   border-top: 1px solid #f1f1f1;
   font-size: 1.4rem;

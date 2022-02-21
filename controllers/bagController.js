@@ -12,6 +12,16 @@ exports.checkID = (req, res, next, val) => {
   next();
 };
 
+exports.checkBody = (req, res, next) => {
+  if (!req.body.name || !req.body.price) {
+    return res.status(400).json({
+      statue: 'fail',
+      message: 'Missing name or price!',
+    });
+  }
+  next();
+};
+
 const bags = JSON.parse(
   fs.readFileSync(`${__dirname}/../dev-data/data/bag-simple.json`)
 );

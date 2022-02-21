@@ -8,8 +8,12 @@ const userRouter = require('./routes/userRoutes');
 const app = express();
 
 // 1) MIDDLEWARES
-app.use(morgan('dev'));
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
+
 app.use(express.json()); // middleware using app.use
+app.use(express.static(`${__dirname}/public`)); // Serving static files
 app.use((req, res, next) => {
   console.log('Hello from the middleware❤️');
   next(); // never forget to use next in middleware in case the application stuch on here~
